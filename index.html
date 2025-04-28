@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ÉtigArt – Site Vitrine</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://source.unsplash.com/80x40/?logo,art"
+            alt="ÉtigArt"
+            height="40"
+          />
+        </a>
+        <button
+          class="navbar-toggler text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <i class="bi bi-list fs-3"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#presentation">Accueil</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#referencement">Référencement</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item ms-3">
+              <a class="btn btn-primary" href="#contact">Devis gratuit</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Présentation de l'entreprise -->
+    <section id="presentation" class="py-5 text-center">
+      <div class="container">
+        <h2>Bienvenue chez ÉtigArt</h2>
+        <p class="lead">
+          Nous sommes votre agence de création digitale : sites web, apps,
+          branding et marketing 360°.
+        </p>
+      </div>
+    </section>
+
+    <!-- Hero Carousel (Bootstrap par défaut) -->
+    <!-- Hero Carousel avec images Freepik -->
+    <style>
+      .carousel-item {
+        height: 75vh; /* ou la hauteur que vous choisissez */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+      .carousel-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); /* optionnel : assombrit légèrement */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .carousel-content {
+        color: #fff;
+        text-align: center;
+        max-width: 90%;
+      }
+      .carousel-content .btn {
+        margin: 0.5rem;
+      }
+    </style>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div
+          class="carousel-item active"
+          style="background-image: url('images/silder1.png')"
+        >
+          <div class="carousel-overlay">
+            <div class="carousel-content">
+              <h1 class="display-4">Donnez vie à votre image digitale</h1>
+              <p class="lead">
+                Sites web, applications et branding sur-mesure.
+              </p>
+              <a href="#services" class="btn btn-primary">Nos services</a>
+              <a href="#portfolio" class="btn btn-outline-light"
+                >Voir portfolio</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div
+          class="carousel-item"
+          style="background-image: url('images/silder2.png')"
+        >
+          <div class="carousel-overlay">
+            <div class="carousel-content">
+              <h1 class="display-4">Boostez votre visibilité</h1>
+              <p class="lead">Campagnes social media et publicités ciblées.</p>
+              <a href="#services" class="btn btn-primary">En savoir plus</a>
+              <a href="#contact" class="btn btn-outline-light"
+                >Contactez-nous</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div
+          class="carousel-item"
+          style="background-image: url('images/silder3.png')"
+        >
+          <div class="carousel-overlay">
+            <div class="carousel-content">
+              <h1 class="display-4">Des projets sur-mesure</h1>
+              <p class="lead">Découvrez nos réalisations web et print.</p>
+              <a href="#portfolio" class="btn btn-primary">Voir projets</a>
+              <a href="#contact" class="btn btn-outline-light">Devis gratuit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contrôles -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#myCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Ajoutez ceci dans votre <head> ou votre fichier CSS principal -->
+    <style>
+      /* Gradient personnalisé pour les cards */
+      #services .card {
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        color: #fff; /* Texte en blanc pour le contraste */
+        border: none; /* On enlève la bordure par défaut */
+        transition: transform 0.3s; /* Optionnel : effet au survol */
+      }
+      /* Effet “pop” au survol */
+      #services .card:hover {
+        transform: translateY(-5px);
+      }
+      /* Couleur des icônes en blanc */
+      #services .card .bi {
+        color: #fff !important;
+      }
+    </style>
+
+    <!-- Votre section “Nos services” -->
+    <section id="services" class="services py-5">
+      <div class="container">
+        <h2 class="text-white mb-4">Nos services</h2>
+        <div class="row g-4">
+          <!-- Service 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card p-4 h-100 text-center">
+              <i class="bi bi-laptop-fill fs-1 mb-3"></i>
+              <h5>Création de site web</h5>
+              <p>Sites responsives et modernes, adaptés à tous les écrans.</p>
+            </div>
+          </div>
+          <!-- Service 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card p-4 h-100 text-center">
+              <i class="bi bi-phone-fill fs-1 mb-3"></i>
+              <h5>Application mobile & web</h5>
+              <p>UX/UI sur-mesure et développement full-stack.</p>
+            </div>
+          </div>
+          <!-- Service 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card p-4 h-100 text-center">
+              <i class="bi bi-geo-alt-fill fs-1 mb-3"></i>
+              <h5>Référencement Google Maps</h5>
+              <p>Optimisation locale pour apparaître en tête des recherches.</p>
+            </div>
+          </div>
+          <!-- Service 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card p-4 h-100 text-center">
+              <i class="bi bi-facebook fs-1 mb-3"></i>
+              <h5>Gestion page Facebook</h5>
+              <p>
+                Animation de communauté et publication de contenus engageants.
+              </p>
+            </div>
+          </div>
+          <!-- Service 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card p-4 h-100 text-center">
+              <i class="bi bi-rocket-fill fs-1 mb-3"></i>
+              <h5>Boost Facebook & TikTok</h5>
+              <p>
+                Campagnes publicitaires ciblées pour augmenter votre audience.
+              </p>
+            </div>
+          </div>
+          <!-- Service 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card p-4 h-100 text-center">
+              <i class="bi bi-palette-fill fs-1 mb-3"></i>
+              <h5>Création d’affiches & logo</h5>
+              <p>
+                Branding professionnel et supports de communication imprimés.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vague du bas (optionnel) -->
+      <div class="wave-bottom">
+        <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+          <path d="M0,0 C300,100 900,0 1200,100 L1200,0 L0,0 Z" fill="#fff" />
+        </svg>
+      </div>
+    </section>
+    <!-- DANS VOTRE CSS GLOBAL ou DANS <head> -->
+    <style>
+      /* Gradient pour les cards de Services ET Référencement */
+      #services .card,
+      #referencement .card {
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        color: #fff; /* Texte en blanc */
+        border: none;
+        transition: transform 0.3s;
+      }
+      /* Effet “pop” au survol */
+      #services .card:hover,
+      #referencement .card:hover {
+        transform: translateY(-5px);
+      }
+      /* Icônes en blanc */
+      #services .card .bi,
+      #referencement .card .bi {
+        color: #fff !important;
+      }
+    </style>
+
+    <!-- SECTION Référencement mise à jour -->
+    <section id="referencement" class="py-5">
+      <div class="container">
+        <h2 class="text-white text-center mb-4">Référencement & Local SEO</h2>
+        <div class="row g-4">
+          <!-- SEO Local -->
+          <div class="col-md-4">
+            <div class="card h-100 text-center p-4">
+              <i class="bi bi-geo-alt-fill fs-1 mb-3"></i>
+              <h5>SEO Local</h5>
+              <p>Optimisation Google My Business, citations, avis clients.</p>
+            </div>
+          </div>
+          <!-- SEO On-Page -->
+          <div class="col-md-4">
+            <div class="card h-100 text-center p-4">
+              <i class="bi bi-code-slash fs-1 mb-3"></i>
+              <h5>SEO On-Page</h5>
+              <p>
+                Méta-titres, balises Hn, contenus optimisés et balisage
+                sémantique.
+              </p>
+            </div>
+          </div>
+          <!-- SEO Off-Page -->
+          <div class="col-md-4">
+            <div class="card h-100 text-center p-4">
+              <i class="bi bi-link-45deg fs-1 mb-3"></i>
+              <h5>SEO Off-Page</h5>
+              <p>
+                Netlinking, partenariats, stratégie de backlinks de qualité.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: 150px;
+        gap: 1rem;
+      }
+      /* Permet de faire certaines tuiles plus grandes */
+      .portfolio-item.span-2 {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .portfolio-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      .portfolio-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+      .portfolio-item:hover img {
+        transform: scale(1.1);
+      }
+
+      /* Overlay titre + bouton */
+      .portfolio-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .portfolio-item:hover .portfolio-overlay {
+        opacity: 1;
+      }
+      .portfolio-overlay h5 {
+        margin-bottom: 0.5rem;
+      }
+      .portfolio-overlay .btn {
+        border-color: #fff;
+        color: #fff;
+      }
+    </style>
+    <!-- Portfolio amélioré -->
+    <style>
+      /* Wave wrappers */
+      .wave-wrapper {
+        position: relative;
+        width: 100%;
+        line-height: 0;
+        overflow: hidden;
+      }
+      .wave-wrapper svg {
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 120px;
+      }
+
+      /* Portfolio section */
+      #portfolio {
+        position: relative;
+        background-color: #0a2240;
+        color: #fff;
+      }
+      #portfolio .container {
+        position: relative;
+        z-index: 2;
+        padding: 5rem 0;
+      }
+
+      /* Grid Masonry */
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: 150px;
+        gap: 1rem;
+      }
+      .portfolio-item.span-2 {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .portfolio-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+      .portfolio-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+      .portfolio-item:hover img {
+        transform: scale(1.1);
+      }
+
+      /* Overlay */
+      .portfolio-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .portfolio-item:hover .portfolio-overlay {
+        opacity: 1;
+      }
+      .portfolio-overlay h5,
+      .portfolio-overlay .btn {
+        color: #fff;
+      }
+      .portfolio-overlay .btn {
+        border-color: #fff;
+        margin-top: 0.5rem;
+      }
+    </style>
+
+    <!-- Vague blanche en haut -->
+    <div class="wave-wrapper" style="transform: rotate(180deg)">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <!-- calque d'ombre -->
+        <path
+          d="M0,60 C300,20 600,100 900,50 C1200,0 1500,80 1800,40 L1800,0 L0,0 Z"
+          fill="rgba(255,255,255,0.2)"
+        />
+        <!-- calque principal -->
+        <path
+          d="M0,80 C300,40 600,120 900,70 C1200,20 1500,100 1800,60 L1800,0 L0,0 Z"
+          fill="#fff"
+        />
+      </svg>
+    </div>
+
+    <!-- Portfolio amélioré -->
+    <section id="portfolio" class="portfolio py-5">
+      <div class="container">
+        <h2 class="text-white mb-4 text-center">Portfolio</h2>
+        <div class="portfolio-grid">
+          <!-- Tuile 1 : Projet Web Vitrine -->
+          <div class="portfolio-item span-1">
+            <img
+              src="https://img.freepik.com/free-vector/flat-design-responsive-website-design_23-2149489190.jpg?t=st=1745882417~exp=1745886017~hmac=de4cb89da1633f053bbaf1568f99b9790604d75f0c5518b51066055586608596"
+              alt="Projet Web Vitrine"
+            />
+            <div class="portfolio-overlay">
+              <h5>Projet Web Vitrine</h5>
+              <a href="#" class="btn btn-outline-light">Voir le cas</a>
+            </div>
+          </div>
+
+          <!-- Tuile 2 : App Mobile UX/UI -->
+          <div class="portfolio-item span-1">
+            <img
+              src="https://img.freepik.com/free-vector/mobile-ui-ux-concept-illustration_114360-11697.jpg?semt=ais_hybrid&w=740"
+              alt="App Mobile UX/UI"
+            />
+            <div class="portfolio-overlay">
+              <h5>App Mobile UX/UI</h5>
+              <a href="#" class="btn btn-outline-light">Voir le cas</a>
+            </div>
+          </div>
+
+          <!-- Tuile 3 : Branding & Logo -->
+          <div class="portfolio-item span-1">
+            <img
+              src="https://img.freepik.com/free-vector/creative-mini-designers-changing-website-interface-tiny-persons-covering-computer-screen-with-paint-digital-content-flat-vector-illustration-teamwork-marketing-development-concept-banner_74855-22995.jpg?semt=ais_hybrid&w=740"
+              alt="Branding & Logo"
+            />
+            <div class="portfolio-overlay">
+              <h5>Branding & Logo</h5>
+              <a href="#" class="btn btn-outline-light">Voir le cas</a>
+            </div>
+          </div>
+
+          <!-- Tuile large : Campagne Digitale -->
+          <div class="portfolio-item span-2">
+            <img
+              src="https://img.freepik.com/free-vector/responsive-concept-illustration_114360-6048.jpg?semt=ais_hybrid&w=740"
+              alt="Campagne Digitale"
+            />
+            <div class="portfolio-overlay">
+              <h5>Campagne Digitale</h5>
+              <a href="#" class="btn btn-outline-light">Voir le cas</a>
+            </div>
+          </div>
+
+          <!-- Tuile 5 : Site e-commerce -->
+          <div class="portfolio-item span-1">
+            <img
+              src="https://img.freepik.com/free-vector/flat-design-e-commerce-logos-pack_23-2148953426.jpg"
+              alt="Site e-commerce"
+            />
+            <div class="portfolio-overlay">
+              <h5>Site e-commerce</h5>
+              <a href="#" class="btn btn-outline-light">Voir le cas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vague blanche en bas -->
+    <div class="wave-wrapper">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <!-- calque principal -->
+        <path
+          d="M0,0 C300,60 600,0 900,50 C1200,100 1500,40 1800,90 L1800,120 L0,120 Z"
+          fill="#fff"
+        />
+        <!-- calque d'ombre -->
+        <path
+          d="M0,20 C300,80 600,20 900,70 C1200,120 1500,60 1800,110 L1800,120 L0,120 Z"
+          fill="rgba(255,255,255,0.2)"
+        />
+      </svg>
+    </div>
+    <!-- Contact / Devis -->
+    <style>
+      :root {
+        --blue-dark: #0a2240;
+        --blue-light: #3a5ba0;
+        --white: #ffffff;
+        --accent: #ffc107;
+      }
+    
+      /* SECTION CONTACT */
+      #contact {
+        position: relative;
+        background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+        color: var(--white);
+        overflow: hidden;
+        padding: 0;
+      }
+      /* Découpes diagonales */
+      #contact::before,
+      #contact::after {
+        content: '';
+        position: absolute;
+        width: 150%;
+        height: 100px;
+        left: -25%;
+        background: var(--white);
+        clip-path: polygon(0 100%, 100% 0, 100% 100%);
+        z-index: 1;
+      }
+      #contact::before { top: 0; transform: translateY(-100px) rotate(180deg); }
+      #contact::after  { bottom: 0; transform: translateY(100px); }
+    
+      /* Contenu */
+      #contact .container {
+        position: relative;
+        z-index: 2;
+        padding: 5rem 0;
+      }
+      #contact h2 {
+        font-weight: 600;
+        margin-bottom: 3rem;
+      }
+    
+      /* Glassmorphism sur le formulaire */
+      .glass-card {
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+        padding: 2rem;
+      }
+      /* Champs avec icônes */
+      .glass-card .form-group {
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+      .glass-card .form-group i {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--accent);
+        font-size: 1.2rem;
+      }
+      .glass-card .form-control {
+        padding-left: 3rem;
+        background: rgba(255,255,255,0.3);
+        border: none;
+        border-radius: 2rem;
+        color: var(--white);
+      }
+      .glass-card .form-control::placeholder {
+        color: rgba(255,255,255,0.7);
+      }
+      .glass-card textarea.form-control {
+        padding-top: 1rem;
+      }
+      .glass-card .btn-submit {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 2rem;
+        background: var(--accent);
+        border: none;
+        color: var(--blue-dark);
+        font-weight: 600;
+        transition: background .3s;
+      }
+      .glass-card .btn-submit:hover {
+        background: darken(var(--accent), 10%);
+      }
+    
+      /* Panneau infos pratiques */
+      .info-panel {
+        background: rgba(255,255,255,0.9);
+        color: var(--blue-dark);
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      }
+      .info-panel h5 {
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+      .info-panel .info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .info-panel .info-item i {
+        font-size: 1.5rem;
+        margin-right: 0.75rem;
+        color: var(--accent);
+      }
+      .info-panel .support-img {
+        margin-top: 2rem;
+        text-align: center;
+      }
+      .info-panel .support-img img {
+        max-width: 100%;
+        border-radius: .75rem;
+      }
+    </style>
+    
+    <section id="contact">
+      <div class="container">
+        <h2 class="text-center">Contactez-nous</h2>
+        <div class="row gy-4 justify-content-center">
+    
+          <!-- Formulaire devis -->
+          <div class="col-lg-6">
+            <div class="glass-card">
+              <form>
+                <div class="form-group">
+                  <i class="bi bi-person-fill"></i>
+                  <input type="text" id="name" class="form-control" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                  <i class="bi bi-envelope-fill"></i>
+                  <input type="email" id="email" class="form-control" placeholder="Adresse e-mail" required>
+                </div>
+                <div class="form-group">
+                  <i class="bi bi-telephone-fill"></i>
+                  <input type="tel" id="phone" class="form-control" placeholder="Téléphone">
+                </div>
+                <div class="form-group">
+                  <i class="bi bi-chat-dots-fill"></i>
+                  <textarea id="message" rows="4" class="form-control" placeholder="Décrivez votre projet" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer ma demande</button>
+              </form>
+            </div>
+          </div>
+    
+          <!-- Infos pratiques -->
+          <div class="col-lg-4">
+            <div class="info-panel h-100">
+              <h5>Infos pratiques</h5>
+              <div class="info-item">
+                <i class="bi bi-telephone-fill"></i>
+                <span>+225 05 84 30 96 96</span>
+              </div>
+              <div class="info-item">
+                <i class="bi bi-envelope-fill"></i>
+                <span>contact@etigart.ci</span>
+              </div>
+              <div class="info-item">
+                <i class="bi bi-clock-fill"></i>
+                <span>Lun–Ven : 9h–18h<br>Sam : 9h–13h</span>
+              </div>
+              <div class="support-img">
+                <img src="https://img.freepik.com/free-vector/customer-service-concept-illustration_114360-1202.jpg" alt="Support">
+              </div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+
+    <style>
+      :root {
+        --footer-bg: #0a2240;
+        --footer-gradient: linear-gradient(135deg, #0a2240 0%, #162a53 100%);
+        --footer-accent: #ffc107;
+        --footer-text: #ffffff;
+        --footer-muted: #c0c0c0;
+      }
+    
+      footer {
+        position: relative;
+        background: var(--footer-gradient);
+        color: var(--footer-text);
+        overflow: hidden;
+      }
+    
+      /* Séparation en vague (clip-path) */
+      footer::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: 0; right: 0;
+        height: 80px;
+        background: var(--footer-bg);
+        clip-path: polygon(0 100%, 20% 50%, 40% 100%, 60% 50%, 80% 100%, 100% 50%, 100% 100%, 0% 100%);
+        z-index: 1;
+      }
+    
+      .footer-inner {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        gap: 2rem;
+        padding: 4rem 2rem 2rem;
+      }
+    
+      .footer-block h5 {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        position: relative;
+        padding-bottom: .5rem;
+      }
+      .footer-block h5::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: var(--footer-accent);
+        border-radius: 2px;
+      }
+    
+      .footer-block p,
+      .footer-block li,
+      .footer-block a {
+        font-size: .9rem;
+        color: var(--footer-muted);
+      }
+      .footer-block a:hover {
+        color: var(--footer-text);
+        text-decoration: none;
+      }
+    
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-links li + li {
+        margin-top: .5rem;
+      }
+    
+      .footer-contact i {
+        color: var(--footer-accent);
+        margin-right: .5rem;
+      }
+    
+      .footer-news form {
+        display: flex;
+        gap: .5rem;
+      }
+      .footer-news input {
+        flex: 1;
+        padding: .5rem 1rem;
+        border: none;
+        border-radius: 2rem;
+        outline: none;
+      }
+      .footer-news button {
+        padding: .5rem 1rem;
+        border: none;
+        border-radius: 2rem;
+        background: var(--footer-accent);
+        color: var(--footer-bg);
+        font-weight: bold;
+        cursor: pointer;
+        transition: background .3s;
+      }
+      .footer-news button:hover {
+        background: darken(var(--footer-accent), 10%);
+      }
+    
+      .footer-social a {
+        display: inline-block;
+        margin-right: 1rem;
+        font-size: 1.5rem;
+        color: var(--footer-text);
+        position: relative;
+        transition: color .3s;
+      }
+      .footer-social a::after {
+        content: "";
+        position: absolute;
+        inset: -5px;
+        border-radius: 50%;
+        background: rgba(255,193,7,0.3);
+        opacity: 0;
+        transition: opacity .3s;
+      }
+      .footer-social a:hover {
+        color: var(--footer-accent);
+      }
+      .footer-social a:hover::after {
+        opacity: 1;
+      }
+    
+      .footer-bottom {
+        text-align: center;
+        padding: 1rem 0 2rem;
+        font-size: .8rem;
+        color: var(--footer-muted);
+      }
+    </style>
+    
+    <footer>
+      <div class="footer-inner">
+        <!-- À propos -->
+        <div class="footer-block footer-about">
+          <h5>À propos</h5>
+          <p>ÉtigArt, votre agence digitale en Côte d’Ivoire, accompagne vos projets web, mobile et branding depuis 2018.</p>
+        </div>
+    
+        <!-- Liens utiles -->
+        <div class="footer-block footer-links">
+          <h5>Liens utiles</h5>
+          <ul>
+            <li><a href="#presentation">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+    
+        <!-- Contact -->
+        <div class="footer-block footer-contact">
+          <h5>Contact</h5>
+          <p><i class="bi bi-telephone-fill"></i>+225 05 84 30 96 96</p>
+          <p><i class="bi bi-envelope-fill"></i>contact@etigart.ci</p>
+          <p><i class="bi bi-geo-alt-fill"></i>Abidjan, Côte d’Ivoire</p>
+        </div>
+    
+        <!-- Newsletter & Réseaux -->
+        <div class="footer-block footer-news">
+          <h5>Newsletter</h5>
+          <form>
+            <input type="email" placeholder="Votre email" required>
+            <button type="submit">OK</button>
+          </form>
+          <h5 class="mt-4">Suivez-nous</h5>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    
+      <div class="footer-bottom">
+        &copy; 2025 ÉtigArt · Tous droits réservés
+      </div>
+    </footer>
+    
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

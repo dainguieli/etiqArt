@@ -1,0 +1,73 @@
+
+      :root {
+        --blue-dark: #0a2240;
+        --yellow: #ffd500;
+        --white: #ffffff;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background: var(--blue-dark);
+        color: var(--white);
+        font-family: "Open Sans", sans-serif;
+      }
+      a,
+      .nav-link {
+        color: var(--white);
+      }
+      .navbar {
+        background: var(--blue-dark);
+      }
+      .btn-primary {
+        background: var(--yellow);
+        border-color: var(--yellow);
+        color: var(--blue-dark);
+        font-weight: 600;
+      }
+      .btn-outline-light {
+        color: var(--white);
+        border-color: var(--white);
+      }
+      h2,
+      h3,
+      h5 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+      }
+      /* CSS additionnel pour Portfolio */
+      .portfolio .position-relative {
+        cursor: pointer;
+      }
+      .portfolio .overlay {
+        background: rgba(10, 34, 64, 0.7);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      .portfolio .position-relative:hover .overlay {
+        opacity: 1;
+      }
+
+      /* Services cards */
+      .services .card {
+        border-radius: 0.75rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .services .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Portfolio cards */
+      .portfolio .card {
+        border-radius: 0.5rem;
+        overflow: hidden;
+      }
+
+      /* Projets réalisés */
+      .projects-realized .card {
+        border-radius: 0.5rem;
+        background: var(--white);
+        color: var(--blue-dark);
+      }
+  
