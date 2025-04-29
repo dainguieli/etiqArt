@@ -3,20 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ÉtigArt, agence digitale en Côte d’Ivoire spécialiste en création de sites web, applications mobiles, branding et marketing numérique depuis 2018."
+    />
     <title>ÉtigArt – Site Vitrine</title>
 
-    <!-- Bootstrap CSS -->
+    <!-- Préchargement et chargement non bloquant des CSS -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      as="style"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <!-- Bootstrap Icons -->
+    <noscript>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <link rel="preload" href="style.css" as="style" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Préchargement des fonts -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      as="style"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-
-    <link rel="stylesheet" href="style.css" />
+    <noscript>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+        rel="stylesheet"
+      />
+    </noscript>
   </head>
   <body>
     <!-- Navbar -->
@@ -25,7 +57,7 @@
         <a class="navbar-brand" href="#">
           <img
             src="https://source.unsplash.com/80x40/?logo,art"
-            alt="ÉtigArt"
+            alt="ÉtiqArt"
             height="40"
           />
         </a>
@@ -62,10 +94,10 @@
     <!-- Présentation de l'entreprise -->
     <section id="presentation" class="py-5 text-center">
       <div class="container">
-        <h2>Bienvenue chez ÉtigArt</h2>
+        <h1>Bienvenue chez ÉtigArt</h1>
         <p class="lead">
-          Nous sommes votre agence de création digitale : sites web, apps,
-          branding et marketing 360°.
+          Votre agence digitale en Côte d’Ivoire : sites web, apps, branding et
+          marketing 360°.
         </p>
       </div>
     </section>
@@ -99,13 +131,12 @@
         margin: 0.5rem;
       }
     </style>
-
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <!-- Slide 1 -->
         <div
           class="carousel-item active"
-          style="background-image: url('images/silder1.png')"
+          style="background-image: url('images/silder1.webp')"
         >
           <div class="carousel-overlay">
             <div class="carousel-content">
@@ -124,7 +155,7 @@
         <!-- Slide 2 -->
         <div
           class="carousel-item"
-          style="background-image: url('images/silder2.png')"
+          style="background-image: url('images/silder2.webp')"
         >
           <div class="carousel-overlay">
             <div class="carousel-content">
@@ -141,7 +172,7 @@
         <!-- Slide 3 -->
         <div
           class="carousel-item"
-          style="background-image: url('images/silder3.png')"
+          style="background-image: url('images/silder3.webp')"
         >
           <div class="carousel-overlay">
             <div class="carousel-content">
@@ -196,6 +227,12 @@
     <section id="services" class="services py-5">
       <div class="container">
         <h2 class="text-white mb-4">Nos services</h2>
+        <!-- Nouvelle description -->
+        <p class="text-light lead mb-5">
+          Chez ÉtigArt, nous mettons notre expertise au service de votre
+          développement digital : découvrez nos solutions sur-mesure pour créer,
+          promouvoir et optimiser votre présence en ligne.
+        </p>
         <div class="row g-4">
           <!-- Service 1 -->
           <div class="col-md-6 col-lg-4">
@@ -226,9 +263,7 @@
             <div class="card p-4 h-100 text-center">
               <i class="bi bi-facebook fs-1 mb-3"></i>
               <h5>Gestion page Facebook</h5>
-              <p>
-                Animation de communauté et publication de contenus engageants.
-              </p>
+              <p>Animation de communauté et contenus engageants.</p>
             </div>
           </div>
           <!-- Service 5 -->
@@ -246,21 +281,20 @@
             <div class="card p-4 h-100 text-center">
               <i class="bi bi-palette-fill fs-1 mb-3"></i>
               <h5>Création d’affiches & logo</h5>
-              <p>
-                Branding professionnel et supports de communication imprimés.
-              </p>
+              <p>Branding professionnel et supports imprimés.</p>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Vague du bas (optionnel) -->
-      <div class="wave-bottom">
-        <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
-          <path d="M0,0 C300,100 900,0 1200,100 L1200,0 L0,0 Z" fill="#fff" />
-        </svg>
+        <!-- Vague du bas (optionnel) -->
+        <div class="wave-bottom mt-5">
+          <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
+            <path d="M0,0 C300,100 900,0 1200,100 L1200,0 L0,0 Z" fill="#fff" />
+          </svg>
+        </div>
       </div>
     </section>
+
     <!-- DANS VOTRE CSS GLOBAL ou DANS <head> -->
     <style>
       /* Gradient pour les cards de Services ET Référencement */
@@ -287,6 +321,13 @@
     <section id="referencement" class="py-5">
       <div class="container">
         <h2 class="text-white text-center mb-4">Référencement & Local SEO</h2>
+        <!-- Nouvelle description -->
+        <p class="text-light lead mb-5 text-center">
+          Améliorez votre visibilité en ligne grâce à notre expertise SEO : du
+          référencement local à l’optimisation on-page et off-page, nous
+          déployons des stratégies sur-mesure pour capter l’attention de vos
+          clients.
+        </p>
         <div class="row g-4">
           <!-- SEO Local -->
           <div class="col-md-4">
@@ -312,9 +353,7 @@
             <div class="card h-100 text-center p-4">
               <i class="bi bi-link-45deg fs-1 mb-3"></i>
               <h5>SEO Off-Page</h5>
-              <p>
-                Netlinking, partenariats, stratégie de backlinks de qualité.
-              </p>
+              <p>Netlinking, partenariats, backlinks de qualité.</p>
             </div>
           </div>
         </div>
@@ -482,73 +521,77 @@
       </svg>
     </div>
 
-    <!-- Portfolio amélioré -->
-    <section id="portfolio" class="portfolio py-5">
-      <div class="container">
-        <h2 class="text-white mb-4 text-center">Portfolio</h2>
-        <div class="portfolio-grid">
-          <!-- Tuile 1 : Projet Web Vitrine -->
-          <div class="portfolio-item span-1">
-            <img
-              src="https://img.freepik.com/free-vector/flat-design-responsive-website-design_23-2149489190.jpg?t=st=1745882417~exp=1745886017~hmac=de4cb89da1633f053bbaf1568f99b9790604d75f0c5518b51066055586608596"
-              alt="Projet Web Vitrine"
-            />
-            <div class="portfolio-overlay">
-              <h5>Projet Web Vitrine</h5>
-              <a href="#" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-
-          <!-- Tuile 2 : App Mobile UX/UI -->
-          <div class="portfolio-item span-1">
-            <img
-              src="https://img.freepik.com/free-vector/mobile-ui-ux-concept-illustration_114360-11697.jpg?semt=ais_hybrid&w=740"
-              alt="App Mobile UX/UI"
-            />
-            <div class="portfolio-overlay">
-              <h5>App Mobile UX/UI</h5>
-              <a href="#" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-
-          <!-- Tuile 3 : Branding & Logo -->
-          <div class="portfolio-item span-1">
-            <img
-              src="https://img.freepik.com/free-vector/creative-mini-designers-changing-website-interface-tiny-persons-covering-computer-screen-with-paint-digital-content-flat-vector-illustration-teamwork-marketing-development-concept-banner_74855-22995.jpg?semt=ais_hybrid&w=740"
-              alt="Branding & Logo"
-            />
-            <div class="portfolio-overlay">
-              <h5>Branding & Logo</h5>
-              <a href="#" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-
-          <!-- Tuile large : Campagne Digitale -->
-          <div class="portfolio-item span-2">
-            <img
-              src="https://img.freepik.com/free-vector/responsive-concept-illustration_114360-6048.jpg?semt=ais_hybrid&w=740"
-              alt="Campagne Digitale"
-            />
-            <div class="portfolio-overlay">
-              <h5>Campagne Digitale</h5>
-              <a href="#" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-
-          <!-- Tuile 5 : Site e-commerce -->
-          <div class="portfolio-item span-1">
-            <img
-              src="https://img.freepik.com/free-vector/flat-design-e-commerce-logos-pack_23-2148953426.jpg"
-              alt="Site e-commerce"
-            />
-            <div class="portfolio-overlay">
-              <h5>Site e-commerce</h5>
-              <a href="#" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
+ <!-- Portfolio amélioré -->
+<section id="portfolio" class="portfolio py-5">
+  <div class="container">
+    <h2 class="text-white mb-4 text-center">Portfolio</h2>
+    <!-- Description de la section -->
+    <p class="text-light lead mb-5 text-center">
+      Découvrez quelques-unes de nos réalisations phares : sites vitrines, applications mobiles, identités visuelles et campagnes digitales conçues sur-mesure pour nos clients.
+    </p>
+    <div class="portfolio-grid">
+      <!-- Tuile 1 : Projet Web Vitrine -->
+      <div class="portfolio-item span-1">
+        <img
+          src="https://img.freepik.com/free-vector/flat-design-responsive-website-design_23-2149489190.jpg"
+          alt="Projet Web Vitrine"
+        />
+        <div class="portfolio-overlay">
+          <h5>Projet Web Vitrine</h5>
+          <a href="#" class="btn btn-outline-light">Voir le cas</a>
         </div>
       </div>
-    </section>
+
+      <!-- Tuile 2 : App Mobile UX/UI -->
+      <div class="portfolio-item span-1">
+        <img
+          src="https://img.freepik.com/free-vector/mobile-ui-ux-concept-illustration_114360-11697.jpg?semt=ais_hybrid&w=740"
+          alt="App Mobile UX/UI"
+        />
+        <div class="portfolio-overlay">
+          <h5>App Mobile UX/UI</h5>
+          <a href="#" class="btn btn-outline-light">Voir le cas</a>
+        </div>
+      </div>
+
+      <!-- Tuile 3 : Branding & Logo -->
+      <div class="portfolio-item span-1">
+        <img
+          src="https://img.freepik.com/free-vector/creative-mini-designers-changing-website-interface-tiny-persons-covering-computer-screen-with-paint-digital-content-flat-vector-illustration-teamwork-marketing-development-concept-banner_74855-22995.jpg?semt=ais_hybrid&w=740"
+          alt="Branding & Logo"
+        />
+        <div class="portfolio-overlay">
+          <h5>Branding & Logo</h5>
+          <a href="#" class="btn btn-outline-light">Voir le cas</a>
+        </div>
+      </div>
+
+      <!-- Tuile large : Campagne Digitale -->
+      <div class="portfolio-item span-2">
+        <img
+          src="https://img.freepik.com/free-vector/responsive-concept-illustration_114360-6048.jpg?semt=ais_hybrid&w=740"
+          alt="Campagne Digitale"
+        />
+        <div class="portfolio-overlay">
+          <h5>Campagne Digitale</h5>
+          <a href="#" class="btn btn-outline-light">Voir le cas</a>
+        </div>
+      </div>
+
+      <!-- Tuile 5 : Site e-commerce -->
+      <div class="portfolio-item span-1">
+        <img
+          src="https://img.freepik.com/free-vector/flat-design-e-commerce-logos-pack_23-2148953426.jpg"
+          alt="Site e-commerce"
+        />
+        <div class="portfolio-overlay">
+          <h5>Site e-commerce</h5>
+          <a href="#" class="btn btn-outline-light">Voir le cas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Vague blanche en bas -->
     <div class="wave-wrapper">
@@ -573,11 +616,15 @@
         --white: #ffffff;
         --accent: #ffc107;
       }
-    
+
       /* SECTION CONTACT */
       #contact {
         position: relative;
-        background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+        background: linear-gradient(
+          135deg,
+          var(--blue-dark),
+          var(--blue-light)
+        );
         color: var(--white);
         overflow: hidden;
         padding: 0;
@@ -585,7 +632,7 @@
       /* Découpes diagonales */
       #contact::before,
       #contact::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 150%;
         height: 100px;
@@ -594,9 +641,15 @@
         clip-path: polygon(0 100%, 100% 0, 100% 100%);
         z-index: 1;
       }
-      #contact::before { top: 0; transform: translateY(-100px) rotate(180deg); }
-      #contact::after  { bottom: 0; transform: translateY(100px); }
-    
+      #contact::before {
+        top: 0;
+        transform: translateY(-100px) rotate(180deg);
+      }
+      #contact::after {
+        bottom: 0;
+        transform: translateY(100px);
+      }
+
       /* Contenu */
       #contact .container {
         position: relative;
@@ -607,10 +660,10 @@
         font-weight: 600;
         margin-bottom: 3rem;
       }
-    
+
       /* Glassmorphism sur le formulaire */
       .glass-card {
-        background: rgba(255,255,255,0.1);
+        background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(10px);
         border-radius: 1rem;
         padding: 2rem;
@@ -630,13 +683,13 @@
       }
       .glass-card .form-control {
         padding-left: 3rem;
-        background: rgba(255,255,255,0.3);
+        background: rgba(255, 255, 255, 0.3);
         border: none;
         border-radius: 2rem;
         color: var(--white);
       }
       .glass-card .form-control::placeholder {
-        color: rgba(255,255,255,0.7);
+        color: rgba(255, 255, 255, 0.7);
       }
       .glass-card textarea.form-control {
         padding-top: 1rem;
@@ -649,19 +702,19 @@
         border: none;
         color: var(--blue-dark);
         font-weight: 600;
-        transition: background .3s;
+        transition: background 0.3s;
       }
       .glass-card .btn-submit:hover {
         background: darken(var(--accent), 10%);
       }
-    
+
       /* Panneau infos pratiques */
       .info-panel {
-        background: rgba(255,255,255,0.9);
+        background: rgba(255, 255, 255, 0.9);
         color: var(--blue-dark);
         border-radius: 1rem;
         padding: 2rem;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
       }
       .info-panel h5 {
         margin-bottom: 1.5rem;
@@ -683,66 +736,97 @@
       }
       .info-panel .support-img img {
         max-width: 100%;
-        border-radius: .75rem;
+        border-radius: 0.75rem;
       }
     </style>
-    
-    <section id="contact">
-      <div class="container">
-        <h2 class="text-center">Contactez-nous</h2>
-        <div class="row gy-4 justify-content-center">
-    
-          <!-- Formulaire devis -->
-          <div class="col-lg-6">
-            <div class="glass-card">
-              <form>
-                <div class="form-group">
-                  <i class="bi bi-person-fill"></i>
-                  <input type="text" id="name" class="form-control" placeholder="Votre nom" required>
-                </div>
-                <div class="form-group">
-                  <i class="bi bi-envelope-fill"></i>
-                  <input type="email" id="email" class="form-control" placeholder="Adresse e-mail" required>
-                </div>
-                <div class="form-group">
-                  <i class="bi bi-telephone-fill"></i>
-                  <input type="tel" id="phone" class="form-control" placeholder="Téléphone">
-                </div>
-                <div class="form-group">
-                  <i class="bi bi-chat-dots-fill"></i>
-                  <textarea id="message" rows="4" class="form-control" placeholder="Décrivez votre projet" required></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Envoyer ma demande</button>
-              </form>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="text-center">Contactez-nous</h2>
+    <!-- Description de la section Contact -->
+    <p class="text-light lead text-center mb-5">
+      Vous avez un projet ou une question ? Remplissez le formulaire ci-dessous et notre équipe vous recontactera sous 24 h pour en discuter.
+    </p>
+    <div class="row gy-4 justify-content-center">
+      <!-- Formulaire devis -->
+      <div class="col-lg-6">
+        <div class="glass-card">
+          <form>
+            <div class="form-group">
+              <i class="bi bi-person-fill"></i>
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="Votre nom"
+                required
+              />
             </div>
-          </div>
-    
-          <!-- Infos pratiques -->
-          <div class="col-lg-4">
-            <div class="info-panel h-100">
-              <h5>Infos pratiques</h5>
-              <div class="info-item">
-                <i class="bi bi-telephone-fill"></i>
-                <span>+225 05 84 30 96 96</span>
-              </div>
-              <div class="info-item">
-                <i class="bi bi-envelope-fill"></i>
-                <span>contact@etigart.ci</span>
-              </div>
-              <div class="info-item">
-                <i class="bi bi-clock-fill"></i>
-                <span>Lun–Ven : 9h–18h<br>Sam : 9h–13h</span>
-              </div>
-              <div class="support-img">
-                <img src="https://img.freepik.com/free-vector/customer-service-concept-illustration_114360-1202.jpg" alt="Support">
-              </div>
+            <div class="form-group">
+              <i class="bi bi-envelope-fill"></i>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="Adresse e-mail"
+                required
+              />
             </div>
-          </div>
-    
+            <div class="form-group">
+              <i class="bi bi-telephone-fill"></i>
+              <input
+                type="tel"
+                id="phone"
+                class="form-control"
+                placeholder="Téléphone"
+              />
+            </div>
+            <div class="form-group">
+              <i class="bi bi-chat-dots-fill"></i>
+              <textarea
+                id="message"
+                rows="4"
+                class="form-control"
+                placeholder="Décrivez votre projet"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              Envoyer ma demande
+            </button>
+          </form>
         </div>
       </div>
-    </section>
-    
+
+      <!-- Infos pratiques -->
+      <div class="col-lg-4">
+        <div class="info-panel h-100">
+          <h5>Infos pratiques</h5>
+          <div class="info-item">
+            <i class="bi bi-telephone-fill"></i>
+            <span>+225 05 84 30 96 96</span>
+          </div>
+          <div class="info-item">
+            <i class="bi bi-envelope-fill"></i>
+            <span>contact@etigart.ci</span>
+          </div>
+          <div class="info-item">
+            <i class="bi bi-clock-fill"></i>
+            <span>Lun–Ven : 9h–18h<br />Sam : 9h–13h</span>
+          </div>
+          <div class="support-img">
+            <img
+              src="https://img.freepik.com/free-vector/customer-service-concept-illustration_114360-1202.jpg"
+              alt="Support"
+              class="img-fluid rounded"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <style>
       :root {
@@ -752,40 +836,50 @@
         --footer-text: #ffffff;
         --footer-muted: #c0c0c0;
       }
-    
+
       footer {
         position: relative;
         background: var(--footer-gradient);
         color: var(--footer-text);
         overflow: hidden;
       }
-    
+
       /* Séparation en vague (clip-path) */
       footer::before {
         content: "";
         position: absolute;
         top: -40px;
-        left: 0; right: 0;
+        left: 0;
+        right: 0;
         height: 80px;
         background: var(--footer-bg);
-        clip-path: polygon(0 100%, 20% 50%, 40% 100%, 60% 50%, 80% 100%, 100% 50%, 100% 100%, 0% 100%);
+        clip-path: polygon(
+          0 100%,
+          20% 50%,
+          40% 100%,
+          60% 50%,
+          80% 100%,
+          100% 50%,
+          100% 100%,
+          0% 100%
+        );
         z-index: 1;
       }
-    
+
       .footer-inner {
         position: relative;
         z-index: 2;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 2rem;
         padding: 4rem 2rem 2rem;
       }
-    
+
       .footer-block h5 {
         font-size: 1.1rem;
         margin-bottom: 1rem;
         position: relative;
-        padding-bottom: .5rem;
+        padding-bottom: 0.5rem;
       }
       .footer-block h5::after {
         content: "";
@@ -797,72 +891,72 @@
         background: var(--footer-accent);
         border-radius: 2px;
       }
-    
+
       .footer-block p,
       .footer-block li,
       .footer-block a {
-        font-size: .9rem;
+        font-size: 0.9rem;
         color: var(--footer-muted);
       }
       .footer-block a:hover {
         color: var(--footer-text);
         text-decoration: none;
       }
-    
+
       .footer-links ul {
         list-style: none;
         padding: 0;
       }
       .footer-links li + li {
-        margin-top: .5rem;
+        margin-top: 0.5rem;
       }
-    
+
       .footer-contact i {
         color: var(--footer-accent);
-        margin-right: .5rem;
+        margin-right: 0.5rem;
       }
-    
+
       .footer-news form {
         display: flex;
-        gap: .5rem;
+        gap: 0.5rem;
       }
       .footer-news input {
         flex: 1;
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         border: none;
         border-radius: 2rem;
         outline: none;
       }
       .footer-news button {
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         border: none;
         border-radius: 2rem;
         background: var(--footer-accent);
         color: var(--footer-bg);
         font-weight: bold;
         cursor: pointer;
-        transition: background .3s;
+        transition: background 0.3s;
       }
       .footer-news button:hover {
         background: darken(var(--footer-accent), 10%);
       }
-    
+
       .footer-social a {
         display: inline-block;
         margin-right: 1rem;
         font-size: 1.5rem;
         color: var(--footer-text);
         position: relative;
-        transition: color .3s;
+        transition: color 0.3s;
       }
       .footer-social a::after {
         content: "";
         position: absolute;
         inset: -5px;
         border-radius: 50%;
-        background: rgba(255,193,7,0.3);
+        background: rgba(255, 193, 7, 0.3);
         opacity: 0;
-        transition: opacity .3s;
+        transition: opacity 0.3s;
       }
       .footer-social a:hover {
         color: var(--footer-accent);
@@ -870,23 +964,26 @@
       .footer-social a:hover::after {
         opacity: 1;
       }
-    
+
       .footer-bottom {
         text-align: center;
         padding: 1rem 0 2rem;
-        font-size: .8rem;
+        font-size: 0.8rem;
         color: var(--footer-muted);
       }
     </style>
-    
+
     <footer>
       <div class="footer-inner">
         <!-- À propos -->
         <div class="footer-block footer-about">
           <h5>À propos</h5>
-          <p>ÉtigArt, votre agence digitale en Côte d’Ivoire, accompagne vos projets web, mobile et branding depuis 2018.</p>
+          <p>
+            ÉtiqArt, votre agence digitale en Côte d’Ivoire, accompagne vos
+            projets web, mobile et branding depuis 2018.
+          </p>
         </div>
-    
+
         <!-- Liens utiles -->
         <div class="footer-block footer-links">
           <h5>Liens utiles</h5>
@@ -897,7 +994,7 @@
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-    
+
         <!-- Contact -->
         <div class="footer-block footer-contact">
           <h5>Contact</h5>
@@ -905,12 +1002,12 @@
           <p><i class="bi bi-envelope-fill"></i>contact@etigart.ci</p>
           <p><i class="bi bi-geo-alt-fill"></i>Abidjan, Côte d’Ivoire</p>
         </div>
-    
+
         <!-- Newsletter & Réseaux -->
         <div class="footer-block footer-news">
           <h5>Newsletter</h5>
           <form>
-            <input type="email" placeholder="Votre email" required>
+            <input type="email" placeholder="Votre email" required />
             <button type="submit">OK</button>
           </form>
           <h5 class="mt-4">Suivez-nous</h5>
@@ -922,14 +1019,16 @@
           </div>
         </div>
       </div>
-    
+
       <div class="footer-bottom">
-        &copy; 2025 ÉtigArt · Tous droits réservés
+        &copy; 2025 ÉtiqArt · Tous droits réservés
       </div>
     </footer>
-    
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
   </body>
 </html>
