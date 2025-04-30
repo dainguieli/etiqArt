@@ -1,0 +1,6 @@
+# Autorisation pour tous les robots
+User-agent: *
+Allow: /
+
+# Emplacement de votre sitemap
+Sitemap: https://dainguieli.github.io/etiqArt/sitemap.xml
