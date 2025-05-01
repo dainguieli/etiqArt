@@ -16,6 +16,23 @@
       rel="canonical"
       href="https://dainguieli.github.io/etiqArt/site-e-commerce.html"
     />
+    <link
+    rel="preload"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    as="style"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </noscript>
 
     <!-- Favicon & thème -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
@@ -71,28 +88,35 @@
   <body>
     <!-- Header & Navbar -->
     <header>
-      <nav
-        class="navbar navbar-expand-lg navbar-light bg-white shadow-sm"
-        aria-label="Navigation principale"
-      >
+      <nav class="navbar navbar-expand-lg py-3">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="#">
+            <!-- <img
+              src="images/logo.webp"
+              alt="ÉtiqArt"
+            height="100" loading="lazy"
+            width="150"
+            /> -->
+            <style>
+              .responsive-img {
+                aspect-ratio: 2 / 1; /* largeur / hauteur */
+                width: 150px;
+                height: 100px;
+                object-fit: contain;
+              }
+            </style>
             <img
               src="images/logo.webp"
-              alt="Logo ÉtiqArt"
-              width="150"
-              height="50"
+              alt="ÉtiqArt"
+              class="responsive-img"
               loading="lazy"
             />
           </a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler text-white"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#nav"
-            aria-controls="nav"
-            aria-expanded="false"
-            aria-label="Ouvrir le menu"
           >
             <i class="bi bi-list fs-3"></i>
           </button>
@@ -411,10 +435,58 @@
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="text-center py-4">
-      <p class="small mb-0">© 2025 ÉtiqArt – Agence digitale en Côte d’Ivoire</p>
+    <footer>
+      <div class="footer-inner">
+        <!-- À propos -->
+        <div class="footer-block footer-about">
+          <h5>À propos</h5>
+          <p>
+            ÉtiqArt, votre agence digitale en Côte d’Ivoire, accompagne vos
+            projets web, mobile et branding depuis 2018.
+          </p>
+        </div>
+
+        <!-- Liens utiles -->
+        <div class="footer-block footer-links">
+          <h5>Liens utiles</h5>
+          <ul>
+            <li><a href="#presentation">Accueil</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-block footer-contact">
+          <h5>Contact</h5>
+          <p><i class="bi bi-telephone-fill"></i>+225 05 84 30 96 96</p>
+          <p><i class="bi bi-envelope-fill"></i>contact@etigart.ci</p>
+          <p><i class="bi bi-geo-alt-fill"></i>Abidjan, Côte d’Ivoire</p>
+        </div>
+
+        <!-- Newsletter & Réseaux -->
+        <div class="footer-block footer-news">
+          <h5>Newsletter</h5>
+          <form>
+            <input type="email" placeholder="Votre email" required />
+            <button type="submit">OK</button>
+          </form>
+          <h5 class="mt-4">Suivez-nous</h5>
+          <div class="footer-social">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2025 ÉtiqArt · Tous droits réservés
+      </div>
     </footer>
+
 
     <!-- JS Bootstrap -->
     <script
