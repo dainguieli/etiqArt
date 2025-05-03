@@ -9,7 +9,7 @@
       content="ÉtiqArt, agence digitale en Côte d’Ivoire spécialiste en création de sites web, applications mobiles, branding et marketing numérique depuis 2018."
     />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://dainguieli.github.io/etiqArt/" />
+    <link rel="canonical" href="https://etiqarts.com/" />
     <link rel="preload" as="image" href="images/silder1.webp" />
     <link rel="preload" as="image" href="images/silder2.webp" />
     <link rel="preload" as="image" href="images/silder3.webp" />
@@ -29,6 +29,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       as="style"
     />
+    <link
+  href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+  rel="stylesheet"
+/>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -83,8 +87,8 @@
         "@type": "LocalBusiness",
         "name": "ÉtiqArt",
         "description": "ÉtiqArt, agence digitale en Côte d’Ivoire spécialiste en création de sites web, applications mobiles, branding et marketing numérique depuis 2018.",
-        "url": "https://dainguieli.github.io/etiqArt/",
-        "logo": "https://dainguieli.github.io/etiqArt/images/favicon.ico",
+        "url": "https://etiqarts.com/",
+        "logo": "https://etiqarts.com/images/favicon.ico",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Abidjan",
@@ -274,89 +278,181 @@
         background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
         color: #fff; /* Texte en blanc pour le contraste */
         border: none; /* On enlève la bordure par défaut */
-        transition: transform 0.3s; /* Optionnel : effet au survol */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
       /* Effet “pop” au survol */
       #services .card:hover {
         transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
       }
       /* Couleur des icônes en blanc */
       #services .card .bi {
         color: #fff !important;
       }
-    </style>
+       /* ==== Styles et animations pour les vagues ==== */
+       .hero-waves {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin-top: 3rem;
+  margin-bottom: -7px; /* pour remonter sous la section */
+  display: block;
+}
+/* Bleu clair, comme la goutte bleue du logo */
+.hero-waves .wave1 use {
+  fill: rgba(0, 174, 239, 0.3);
+  animation: move-forever 4s linear infinite;
+}
+/* Rose vif, comme la goutte rose du logo */
+.hero-waves .wave2 use {
+  fill: rgba(233, 30, 99, 0.3);
+  animation: move-forever 6s linear infinite;
+}
+/* Jaune vif, couleur de votre “A” */
+.hero-waves .wave3 use {
+  fill: rgba(255, 214, 10, 1);
+  animation: move-forever 8s linear infinite;
+}
 
+@keyframes move-forever {
+  from {
+    transform: translate3d(-90px, 0, 0);
+  }
+  to {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+    </style>
+ 
     <!-- Votre section “Nos services” -->
+    <!-- Section Nos services -->
     <section id="services" class="services py-5">
       <div class="container">
-        <h2 class="text-white mb-4">Nos services</h2>
-        <!-- Nouvelle description -->
-        <p class="text-light lead mb-5">
+  
+        <h2
+          class="text-white mb-4 text-center"
+          data-aos="fade-down"
+        >
+          Nos services
+        </h2>
+        <p
+          class="text-light lead mb-5 text-center"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           Chez ÉtiqArt, nous mettons notre expertise au service de votre
           développement digital : découvrez nos solutions sur-mesure pour créer,
           promouvoir et optimiser votre présence en ligne.
         </p>
+  
         <div class="row g-4">
           <!-- Service 1 -->
           <div class="col-md-6 col-lg-4">
-            <div class="card p-4 h-100 text-center">
+            <div
+              class="card p-4 h-100 text-center"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <i class="bi bi-laptop-fill fs-1 mb-3"></i>
               <h5>Création de site web</h5>
               <p>Sites responsives et modernes, adaptés à tous les écrans.</p>
             </div>
           </div>
+  
           <!-- Service 2 -->
           <div class="col-md-6 col-lg-4">
-            <div class="card p-4 h-100 text-center">
+            <div
+              class="card p-4 h-100 text-center"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <i class="bi bi-phone-fill fs-1 mb-3"></i>
               <h5>Application mobile & web</h5>
               <p>UX/UI sur-mesure et développement full-stack.</p>
             </div>
           </div>
+  
           <!-- Service 3 -->
           <div class="col-md-6 col-lg-4">
-            <div class="card p-4 h-100 text-center">
+            <div
+              class="card p-4 h-100 text-center"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <i class="bi bi-geo-alt-fill fs-1 mb-3"></i>
               <h5>Référencement Google Maps</h5>
               <p>Optimisation locale pour apparaître en tête des recherches.</p>
             </div>
           </div>
+  
           <!-- Service 4 -->
           <div class="col-md-6 col-lg-4">
-            <div class="card p-4 h-100 text-center">
+            <div
+              class="card p-4 h-100 text-center"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
               <i class="bi bi-facebook fs-1 mb-3"></i>
               <h5>Gestion page Facebook</h5>
               <p>Animation de communauté et contenus engageants.</p>
             </div>
           </div>
+  
           <!-- Service 5 -->
           <div class="col-md-6 col-lg-4">
-            <div class="card p-4 h-100 text-center">
+            <div
+              class="card p-4 h-100 text-center"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
               <i class="bi bi-rocket-fill fs-1 mb-3"></i>
               <h5>Boost Facebook & TikTok</h5>
-              <p>
-                Campagnes publicitaires ciblées pour augmenter votre audience.
-              </p>
+              <p>Campagnes publicitaires ciblées pour augmenter votre audience.</p>
             </div>
           </div>
+  
           <!-- Service 6 -->
           <div class="col-md-6 col-lg-4">
-            <div class="card p-4 h-100 text-center">
+            <div
+              class="card p-4 h-100 text-center"
+              data-aos="fade-up"
+              data-aos-delay="700"
+            >
               <i class="bi bi-palette-fill fs-1 mb-3"></i>
               <h5>Création d’affiches & logo</h5>
               <p>Branding professionnel et supports imprimés.</p>
             </div>
           </div>
         </div>
-
-        <!-- Vague du bas (optionnel) -->
-        <div class="wave-bottom mt-5">
-          <svg viewBox="0 0 1200 100" preserveAspectRatio="none">
-            <path d="M0,0 C300,100 900,0 1200,100 L1200,0 L0,0 Z" fill="#fff" />
-          </svg>
-        </div>
       </div>
+  
+      <!-- === SVG animées des vagues === -->
+      <svg
+        class="hero-waves"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28"
+        preserveAspectRatio="none"
+      >
+        <defs>
+          <path
+            id="wave-path"
+            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+          ></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9" fill="#fff"></use>
+        </g>
+      </svg>
     </section>
+    
 
     <!-- DANS VOTRE CSS GLOBAL ou DANS <head> -->
     <style>
@@ -568,21 +664,30 @@
       }
     </style>
 
-    <!-- Vague blanche en haut -->
-    <div class="wave-wrapper" style="transform: rotate(180deg)">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <!-- calque d'ombre -->
-        <path
-          d="M0,60 C300,20 600,100 900,50 C1200,0 1500,80 1800,40 L1800,0 L0,0 Z"
-          fill="rgba(255,255,255,0.2)"
-        />
-        <!-- calque principal -->
-        <path
-          d="M0,80 C300,40 600,120 900,70 C1200,20 1500,100 1800,60 L1800,0 L0,0 Z"
-          fill="#fff"
-        />
-      </svg>
-    </div>
+   <!-- === SVG animées des vagues === -->
+   <svg
+   class="hero-waves"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   viewBox="0 24 150 28"
+   preserveAspectRatio="none"
+ >
+   <defs>
+     <path
+       id="wave-path"
+       d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+     ></path>
+   </defs>
+   <g class="wave1">
+     <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"></use>
+   </g>
+   <g class="wave2">
+     <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"></use>
+   </g>
+   <g class="wave3">
+     <use xlink:href="#wave-path" x="50" y="9" fill="#fff"></use>
+   </g>
+ </svg>
 
     <!-- Portfolio amélioré -->
     <section id="portfolio" class="portfolio py-5">
@@ -717,21 +822,30 @@
     </section>
     
 
-    <!-- Vague blanche en bas -->
-    <div class="wave-wrapper">
-      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <!-- calque principal -->
-        <path
-          d="M0,0 C300,60 600,0 900,50 C1200,100 1500,40 1800,90 L1800,120 L0,120 Z"
-          fill="#fff"
-        />
-        <!-- calque d'ombre -->
-        <path
-          d="M0,20 C300,80 600,20 900,70 C1200,120 1500,60 1800,110 L1800,120 L0,120 Z"
-          fill="rgba(255,255,255,0.2)"
-        />
-      </svg>
-    </div>
+     <!-- === SVG animées des vagues === -->
+     <svg
+     class="hero-waves"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 24 150 28"
+     preserveAspectRatio="none"
+   >
+     <defs>
+       <path
+         id="wave-path"
+         d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+       ></path>
+     </defs>
+     <g class="wave1">
+       <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"></use>
+     </g>
+     <g class="wave2">
+       <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"></use>
+     </g>
+     <g class="wave3">
+       <use xlink:href="#wave-path" x="50" y="9" fill="#fff"></use>
+     </g>
+   </svg>
     <!-- Contact / Devis -->
     <style>
       :root {
@@ -1013,5 +1127,12 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       defer
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,    // durée des animations (ms)
+    once: true        // n’anime qu’une fois au scroll
+  });
+</script>
   </body>
 </html>

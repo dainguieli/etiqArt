@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Emplacement de votre sitemap
-Sitemap: https://dainguieli.github.io/etiqArt/sitemap.xml
+Sitemap: https://etiqarts.com/sitemap.xml
