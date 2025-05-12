@@ -30,9 +30,9 @@
       as="style"
     />
     <link
-  href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-  rel="stylesheet"
-/>
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -172,103 +172,45 @@
     <!-- Hero Carousel (Bootstrap par défaut) -->
     <!-- Hero Carousel avec images Freepik -->
     <style>
-      .carousel-item {
+      .hero {
         height: 75vh; /* ou la hauteur que vous choisissez */
+        background-image: url("images/silder1.webp");
         background-size: cover;
         background-position: center;
         position: relative;
       }
-      .carousel-overlay {
+      .hero-overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.4); /* optionnel : assombrit légèrement */
+        background: rgba(0, 0, 0, 0.4); /* assombrit légèrement */
         display: flex;
         align-items: center;
         justify-content: center;
       }
-      .carousel-content {
+      .hero-content {
         color: #fff;
         text-align: center;
         max-width: 90%;
       }
-      .carousel-content .btn {
+      .hero-content .btn {
         margin: 0.5rem;
       }
     </style>
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <!-- Slide 1 -->
-        <div
-          class="carousel-item active"
-          style="background-image: url('images/silder1.webp')"
-        >
-          <div class="carousel-overlay">
-            <div class="carousel-content">
-              <h1 class="display-4">Donnez vie à votre image digitale</h1>
-              <p class="lead">
-                Sites web, applications et branding sur-mesure.
-              </p>
-              <a href="#services" class="btn btn-primary">Nos services</a>
-              <a href="#portfolio" class="btn btn-outline-light"
-                >Voir notre portfolio de sites web sur-mesure</a
-              >
-            </div>
-          </div>
-        </div>
 
-        <!-- Slide 2 -->
-        <div
-          class="carousel-item"
-          style="background-image: url('images/silder2.webp')"
-        >
-          <div class="carousel-overlay">
-            <div class="carousel-content">
-              <h1 class="display-4">Boostez votre visibilité</h1>
-              <p class="lead">Campagnes social media et publicités ciblées.</p>
-              <a href="#services" class="btn btn-primary">En savoir plus</a>
-              <a href="#contact" class="btn btn-outline-light"
-                >Contactez ÉtiqArt pour un devis gratuit
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div
-          class="carousel-item"
-          style="background-image: url('images/silder3.webp')"
-        >
-          <div class="carousel-overlay">
-            <div class="carousel-content">
-              <h1 class="display-4">Des projets sur-mesure</h1>
-              <p class="lead">Découvrez nos réalisations web et print.</p>
-              <a href="#portfolio" class="btn btn-primary">Voir projets</a>
-              <a href="#contact" class="btn btn-outline-light">Devis gratuit</a>
-            </div>
-          </div>
+    <div class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1 class="display-4">Donnez vie à votre image digitale</h1>
+          <p class="lead">Sites web, applications et branding sur-mesure.</p>
+          <a href="#services" class="btn btn-primary">Nos services</a>
+          <a href="#portfolio" class="btn btn-outline-light">
+            Voir notre portfolio de sites web sur-mesure
+          </a>
         </div>
       </div>
-
-      <!-- Contrôles -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#myCarousel"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#myCarousel"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon"></span>
-      </button>
     </div>
 
     <!-- Ajoutez ceci dans votre <head> ou votre fichier CSS principal -->
@@ -289,51 +231,46 @@
       #services .card .bi {
         color: #fff !important;
       }
-       /* ==== Styles et animations pour les vagues ==== */
-       .hero-waves {
-  position: relative;
-  width: 100%;
-  height: 100px;
-  margin-top: 3rem;
-  margin-bottom: -7px; /* pour remonter sous la section */
-  display: block;
-}
-/* Bleu clair, comme la goutte bleue du logo */
-.hero-waves .wave1 use {
-  fill: rgba(0, 174, 239, 0.3);
-  animation: move-forever 4s linear infinite;
-}
-/* Rose vif, comme la goutte rose du logo */
-.hero-waves .wave2 use {
-  fill: rgba(233, 30, 99, 0.3);
-  animation: move-forever 6s linear infinite;
-}
-/* Jauness vif, couleur de votre “A” */
-.hero-waves .wave3 use {
-  fill: rgba(255, 214, 10, 1);
-  animation: move-forever 8s linear infinite;
-}
+      /* ==== Styles et animations pour les vagues ==== */
+      .hero-waves {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        margin-top: 3rem;
+        margin-bottom: -7px; /* pour remonter sous la section */
+        display: block;
+      }
+      /* Bleu clair, comme la goutte bleue du logo */
+      .hero-waves .wave1 use {
+        fill: rgba(0, 174, 239, 0.3);
+        animation: move-forever 4s linear infinite;
+      }
+      /* Rose vif, comme la goutte rose du logo */
+      .hero-waves .wave2 use {
+        fill: rgba(233, 30, 99, 0.3);
+        animation: move-forever 6s linear infinite;
+      }
+      /* Jauness vif, couleur de votre “A” */
+      .hero-waves .wave3 use {
+        fill: rgba(255, 214, 10, 1);
+        animation: move-forever 8s linear infinite;
+      }
 
-@keyframes move-forever {
-  from {
-    transform: translate3d(-90px, 0, 0);
-  }
-  to {
-    transform: translate3d(85px, 0, 0);
-  }
-}
-
+      @keyframes move-forever {
+        from {
+          transform: translate3d(-90px, 0, 0);
+        }
+        to {
+          transform: translate3d(85px, 0, 0);
+        }
+      }
     </style>
- 
+
     <!-- Votre section “Nos services” -->
     <!-- Section Nos services -->
     <section id="services" class="services py-5">
       <div class="container">
-  
-        <h2
-          class="text-white mb-4 text-center"
-          data-aos="fade-down"
-        >
+        <h2 class="text-white mb-4 text-center" data-aos="fade-down">
           Nos services
         </h2>
         <p
@@ -345,7 +282,7 @@
           développement digital : découvrez nos solutions sur-mesure pour créer,
           promouvoir et optimiser votre présence en ligne.
         </p>
-  
+
         <div class="row g-4">
           <!-- Service 1 -->
           <div class="col-md-6 col-lg-4">
@@ -359,7 +296,7 @@
               <p>Sites responsives et modernes, adaptés à tous les écrans.</p>
             </div>
           </div>
-  
+
           <!-- Service 2 -->
           <div class="col-md-6 col-lg-4">
             <div
@@ -372,7 +309,7 @@
               <p>UX/UI sur-mesure et développement full-stack.</p>
             </div>
           </div>
-  
+
           <!-- Service 3 -->
           <div class="col-md-6 col-lg-4">
             <div
@@ -385,7 +322,7 @@
               <p>Optimisation locale pour apparaître en tête des recherches.</p>
             </div>
           </div>
-  
+
           <!-- Service 4 -->
           <div class="col-md-6 col-lg-4">
             <div
@@ -398,7 +335,7 @@
               <p>Animation de communauté et contenus engageants.</p>
             </div>
           </div>
-  
+
           <!-- Service 5 -->
           <div class="col-md-6 col-lg-4">
             <div
@@ -408,10 +345,12 @@
             >
               <i class="bi bi-rocket-fill fs-1 mb-3"></i>
               <h5>Boost Facebook & TikTok</h5>
-              <p>Campagnes publicitaires ciblées pour augmenter votre audience.</p>
+              <p>
+                Campagnes publicitaires ciblées pour augmenter votre audience.
+              </p>
             </div>
           </div>
-  
+
           <!-- Service 6 -->
           <div class="col-md-6 col-lg-4">
             <div
@@ -426,7 +365,7 @@
           </div>
         </div>
       </div>
-  
+
       <!-- === SVG animées des vagues === -->
       <svg
         class="hero-waves"
@@ -442,17 +381,26 @@
           ></path>
         </defs>
         <g class="wave1">
-          <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"></use>
+          <use
+            xlink:href="#wave-path"
+            x="50"
+            y="3"
+            fill="rgba(255,255,255, .1)"
+          ></use>
         </g>
         <g class="wave2">
-          <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"></use>
+          <use
+            xlink:href="#wave-path"
+            x="50"
+            y="0"
+            fill="rgba(255,255,255, .2)"
+          ></use>
         </g>
         <g class="wave3">
           <use xlink:href="#wave-path" x="50" y="9" fill="#fff"></use>
         </g>
       </svg>
     </section>
-    
 
     <!-- DANS VOTRE CSS GLOBAL ou DANS <head> -->
     <style>
@@ -518,66 +466,7 @@
         </div>
       </div>
     </section>
-
-    <style>
-      .portfolio-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        grid-auto-rows: 150px;
-        gap: 1rem;
-      }
-      /* Permet de faire certaines tuiles plus grandes */
-      .portfolio-item.span-2 {
-        grid-column: span 2;
-        grid-row: span 2;
-      }
-
-      .portfolio-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 0.5rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-      .portfolio-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s;
-      }
-      .portfolio-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      }
-      .portfolio-item:hover img {
-        transform: scale(1.1);
-      }
-
-      /* Overlay titre + bouton */
-      .portfolio-overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.6);
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-      .portfolio-item:hover .portfolio-overlay {
-        opacity: 1;
-      }
-      .portfolio-overlay h5 {
-        margin-bottom: 0.5rem;
-      }
-      .portfolio-overlay .btn {
-        border-color: #fff;
-        color: #fff;
-      }
-    </style>
+    
     <!-- Portfolio amélioré -->
     <style>
       /* Wave wrappers */
@@ -664,188 +553,270 @@
       }
     </style>
 
-   <!-- === SVG animées des vagues === -->
-   <svg
-   class="hero-waves"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   viewBox="0 24 150 28"
-   preserveAspectRatio="none"
- >
-   <defs>
-     <path
-       id="wave-path"
-       d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-     ></path>
-   </defs>
-   <g class="wave1">
-     <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"></use>
-   </g>
-   <g class="wave2">
-     <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"></use>
-   </g>
-   <g class="wave3">
-     <use xlink:href="#wave-path" x="50" y="9" fill="#fff"></use>
-   </g>
- </svg>
+    <!-- === SVG animées des vagues === -->
+    <svg
+      class="hero-waves"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <path
+          id="wave-path"
+          d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+        ></path>
+      </defs>
+      <g class="wave1">
+        <use
+          xlink:href="#wave-path"
+          x="50"
+          y="3"
+          fill="rgba(255,255,255, .1)"
+        ></use>
+      </g>
+      <g class="wave2">
+        <use
+          xlink:href="#wave-path"
+          x="50"
+          y="0"
+          fill="rgba(255,255,255, .2)"
+        ></use>
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff"></use>
+      </g>
+    </svg>
 
     <!-- Portfolio amélioré -->
-    <section id="portfolio" class="portfolio py-5">
-      <div class="container">
-        <h2 class="text-white mb-4 text-center">Portfolio</h2>
-        <!-- Description de la section -->
-        <p class="text-light lead mb-5 text-center">
-          Découvrez quelques-unes de nos réalisations phares : sites vitrines,
-          applications mobiles, identités visuelles et campagnes digitales
-          conçues sur-mesure pour nos clients.
-        </p>
-        <div class="portfolio-grid">
-          <!-- Tuile 1 : SEO Local -->
-          <div class="portfolio-item span-1">
-            <img
-              src="https://img.freepik.com/free-vector/seo-digital-marketing-abstract-concept-illustration_335657-2231.jpg"
-              alt="SEO Local"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h5>SEO Local</h5>
-              <a href="seo-local.html" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-    
-          <!-- Tuile 2 : SEO On-Page -->
-          <div class="portfolio-item span-1">
-            <img
-              src="https://img.freepik.com/free-vector/on-page-seo-optimization-concept-illustration_335657-5186.jpg"
-              alt="SEO On-Page"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h5>SEO On-Page</h5>
-              <a href="seo-onpage.html" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-    
-          <!-- Tuile 3 : App Mobile UX/UI -->
-          <div class="portfolio-item span-1">
-            <img
-              src="https://img.freepik.com/free-vector/mobile-ui-ux-concept-illustration_114360-11697.jpg"
-              alt="App Mobile UX/UI"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h5>App Mobile UX/UI</h5>
-              <a href="app-mobile-ux-ui.html" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-    
-          <!-- Tuile 4 : Branding & Logo -->
-          <div class="portfolio-item span-1">
-            <img
-              src="https://img.freepik.com/free-vector/branding-logo-design-illustration_23-2147524543.jpg"
-              alt="Branding & Logo"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h5>Branding & Logo</h5>
-              <a href="branding-logo.html" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-    
-          <!-- Tuile 5 : Site e-commerce -->
-          <div class="portfolio-item span-1">
-            <img
-              src="https://img.freepik.com/free-vector/flat-design-e-commerce-logos-pack_23-2148953426.jpg"
-              alt="Site e-commerce"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h5>Site e-commerce</h5>
-              <a href="site-e-commerce.html" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-    
-          <!-- Tuile large : Campagne Digitale -->
-          <div class="portfolio-item span-2">
-            <img
-              src="https://img.freepik.com/free-vector/digital-marketing-campaign-illustration_23-2148947490.jpg"
-              alt="Campagne Digitale"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h5>Campagne Digitale</h5>
-              <a href="campagne-digitale.html" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-    
-          <!-- Tuile large : Boost Facebook & TikTok -->
-          <div class="portfolio-item span-2">
-            <img
-              src="https://img.freepik.com/free-vector/social-media-marketing-illustration_23-2148947497.jpg"
-              alt="Boost Facebook & TikTok"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h5>Boost Facebook & TikTok</h5>
-              <a href="boost-social.html" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-    
-          <!-- Tuile 8 : Référencement Google Maps -->
-          <div class="portfolio-item span-1">
-            <img
-              src="https://img.freepik.com/free-vector/google-maps-location-marketing-illustration_23-2148936060.jpg"
-              alt="Référencement Google Maps"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h5>Référencement Google Maps</h5>
-              <a href="google-maps-seo.html" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-    
-          <!-- Tuile 9 : Projet Web Vitrine -->
-          <div class="portfolio-item span-1">
-            <img
-              src="https://img.freepik.com/free-vector/flat-design-responsive-website-design_23-2149489190.jpg"
-              alt="Projet Web Vitrine"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <h5>Projet Web Vitrine</h5>
-              <a href="projet-web-vitrine.html" class="btn btn-outline-light">Voir le cas</a>
-            </div>
-          </div>
-    
+<style>
+  /* Animation fadeInUp */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 150px;
+    gap: 1rem;
+  }
+  .portfolio-item.span-2 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;                        /* caché avant animation */
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  /* Décalages pour l'effet en cascade */
+  .portfolio-item:nth-child(1) { animation-delay: 0.1s; }
+  .portfolio-item:nth-child(2) { animation-delay: 0.2s; }
+  .portfolio-item:nth-child(3) { animation-delay: 0.3s; }
+  .portfolio-item:nth-child(4) { animation-delay: 0.4s; }
+  .portfolio-item:nth-child(5) { animation-delay: 0.5s; }
+  .portfolio-item:nth-child(6) { animation-delay: 0.6s; }
+  .portfolio-item:nth-child(7) { animation-delay: 0.7s; }
+  .portfolio-item:nth-child(8) { animation-delay: 0.8s; }
+  .portfolio-item:nth-child(9) { animation-delay: 0.9s; }
+
+  .portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  .portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  .portfolio-item:hover img {
+    transform: scale(1.1);
+  }
+
+  .portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+  }
+  .portfolio-overlay h5 {
+    margin-bottom: 0.5rem;
+  }
+  .portfolio-overlay .btn {
+    border-color: #fff;
+    color: #fff;
+  }
+
+  /* Responsif */
+  @media (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+    }
+    .portfolio-item.span-2 {
+      grid-column: span 1 !important;
+      grid-row: span 1 !important;
+    }
+    .portfolio-item {
+      height: auto;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 200px;
+    }
+    .portfolio-item.span-2 {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+  }
+</style>
+
+<section id="portfolio" class="portfolio py-5">
+  <div class="container">
+    <h2 class="text-white mb-4 text-center">Portfolio</h2>
+    <p class="text-light lead mb-5 text-center">
+      Découvrez quelques-unes de nos réalisations phares : sites vitrines,
+      applications mobiles, identités visuelles et campagnes digitales
+      conçues sur-mesure pour nos clients.
+    </p>
+    <div class="portfolio-grid">
+      <div class="portfolio-item span-1">
+        <img src="https://img.freepik.com/free-vector/seo-digital-marketing-abstract-concept-illustration_335657-2231.jpg"
+             alt="SEO Local" loading="lazy" />
+        <div class="portfolio-overlay">
+          <h5>SEO Local</h5>
+          <a href="seo-local.html" class="btn btn-outline-light">Voir le cas</a>
         </div>
       </div>
-    </section>
-    
+      <div class="portfolio-item span-1">
+        <img src="https://img.freepik.com/free-vector/on-page-seo-optimization-concept-illustration_335657-5186.jpg"
+             alt="SEO On-Page" loading="lazy" />
+        <div class="portfolio-overlay">
+          <h5>SEO On-Page</h5>
+          <a href="seo-onpage.html" class="btn btn-outline-light">Voir le cas</a>
+        </div>
+      </div>
+      <div class="portfolio-item span-1">
+        <img src="https://img.freepik.com/free-vector/mobile-ui-ux-concept-illustration_114360-11697.jpg"
+             alt="App Mobile UX/UI" loading="lazy" />
+        <div class="portfolio-overlay">
+          <h5>App Mobile UX/UI</h5>
+          <a href="app-mobile-ux-ui.html" class="btn btn-outline-light">Voir le cas</a>
+        </div>
+      </div>
+      <div class="portfolio-item span-1">
+        <img src="https://img.freepik.com/free-vector/branding-logo-design-illustration_23-2147524543.jpg"
+             alt="Branding & Logo" loading="lazy" />
+        <div class="portfolio-overlay">
+          <h5>Branding & Logo</h5>
+          <a href="branding-logo.html" class="btn btn-outline-light">Voir le cas</a>
+        </div>
+      </div>
+      <div class="portfolio-item span-1">
+        <img src="https://img.freepik.com/free-vector/flat-design-e-commerce-logos-pack_23-2148953426.jpg"
+             alt="Site e-commerce" loading="lazy" />
+        <div class="portfolio-overlay">
+          <h5>Site e-commerce</h5>
+          <a href="site-e-commerce.html" class="btn btn-outline-light">Voir le cas</a>
+        </div>
+      </div>
+      <div class="portfolio-item span-2">
+        <img src="https://img.freepik.com/free-vector/digital-marketing-campaign-illustration_23-2148947490.jpg"
+             alt="Campagne Digitale" loading="lazy" />
+        <div class="portfolio-overlay">
+          <h5>Campagne Digitale</h5>
+          <a href="campagne-digitale.html" class="btn btn-outline-light">Voir le cas</a>
+        </div>
+      </div>
+      <div class="portfolio-item span-2">
+        <img src="https://img.freepik.com/free-vector/social-media-marketing-illustration_23-2148947497.jpg"
+             alt="Boost Facebook & TikTok" loading="lazy" />
+        <div class="portfolio-overlay">
+          <h5>Boost Facebook & TikTok</h5>
+          <a href="boost-social.html" class="btn btn-outline-light">Voir le cas</a>
+        </div>
+      </div>
+      <div class="portfolio-item span-1">
+        <img src="https://img.freepik.com/free-vector/google-maps-location-marketing-illustration_23-2148936060.jpg"
+             alt="Référencement Google Maps" loading="lazy" />
+        <div class="portfolio-overlay">
+          <h5>Référencement Google Maps</h5>
+          <a href="google-maps-seo.html" class="btn btn-outline-light">Voir le cas</a>
+        </div>
+      </div>
+      <div class="portfolio-item span-1">
+        <img src="https://img.freepik.com/free-vector/flat-design-responsive-website-design_23-2149489190.jpg"
+             alt="Projet Web Vitrine" loading="lazy" />
+        <div class="portfolio-overlay">
+          <h5>Projet Web Vitrine</h5>
+          <a href="projet-web-vitrine.html" class="btn btn-outline-light">Voir le cas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-     <!-- === SVG animées des vagues === -->
-     <svg
-     class="hero-waves"
-     xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     viewBox="0 24 150 28"
-     preserveAspectRatio="none"
-   >
-     <defs>
-       <path
-         id="wave-path"
-         d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-       ></path>
-     </defs>
-     <g class="wave1">
-       <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"></use>
-     </g>
-     <g class="wave2">
-       <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"></use>
-     </g>
-     <g class="wave3">
-       <use xlink:href="#wave-path" x="50" y="9" fill="#fff"></use>
-     </g>
-   </svg>
+    <!-- === SVG animées des vagues === -->
+    <svg
+      class="hero-waves"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <path
+          id="wave-path"
+          d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+        ></path>
+      </defs>
+      <g class="wave1">
+        <use
+          xlink:href="#wave-path"
+          x="50"
+          y="3"
+          fill="rgba(255,255,255, .1)"
+        ></use>
+      </g>
+      <g class="wave2">
+        <use
+          xlink:href="#wave-path"
+          x="50"
+          y="0"
+          fill="rgba(255,255,255, .2)"
+        ></use>
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff"></use>
+      </g>
+    </svg>
     <!-- Contact / Devis -->
     <style>
       :root {
@@ -1068,8 +1039,6 @@
       </div>
     </section>
 
-   
-   
     <footer>
       <div class="footer-inner">
         <!-- À propos -->
@@ -1128,11 +1097,11 @@
       defer
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,    // durée des animations (ms)
-    once: true        // n’anime qu’une fois au scroll
-  });
-</script>
+    <script>
+      AOS.init({
+        duration: 800, // durée des animations (ms)
+        once: true, // n’anime qu’une fois au scroll
+      });
+    </script>
   </body>
 </html>
